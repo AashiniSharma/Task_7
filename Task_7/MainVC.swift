@@ -23,26 +23,13 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //scrollview height
-        self.mainScrollView.frame.size = CGSize(width: self.view.frame.width, height: 327)
-        
-        let scrollViewHeight = mainScrollView.frame.height
-        let scrollViewWidth = mainScrollView.frame.width
-        
         //instantiating sign in and sign up pages
         signIn = self.storyboard?.instantiateViewController(withIdentifier: "SignInPageVCID") as! SignInPageVC
         signUp = self.storyboard?.instantiateViewController(withIdentifier: "SignUpPageVCID") as! SignUpPageVC
         
-        //setting frames for sign in and sign up pages
-        signIn.view.frame = CGRect(x: 0, y: 0, width: scrollViewWidth, height: scrollViewHeight)
-        signUp.view.frame = CGRect(x: scrollViewWidth, y: 0, width: scrollViewWidth, height: scrollViewHeight)
-        
         //adding child views
         self.addChildViewController(signIn)
         self.addChildViewController(signUp)
-        
-        //increasing the size of scrollview
-        self.mainScrollView.contentSize = CGSize(width: scrollViewWidth*2, height: scrollViewHeight)
         
         //adding sub views
         self.mainScrollView.addSubview(signIn.view)
@@ -58,12 +45,8 @@ class MainVC: UIViewController {
                 else{ return }
             
             let keyboardHeight = userinfo.cgRectValue.height
-            
-            
             self.bottomConstraintOfScrollView.constant = keyboardHeight-130
-            
         })
-        
         
         //Adding Oveserver To Notification Centre for notifying KeyboardWillHide
         
@@ -73,6 +56,26 @@ class MainVC: UIViewController {
             
         })
 
+        signUp.loginButton.addTarget(self, action: #selector(signInButtonAction), for: .touchUpInside)
+        signIn.signUpButton.addTarget(self, action: #selector(signUpButtonAction), for: .touchUpInside)
+
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        //scrollview height
+        self.mainScrollView.frame.size = CGSize(width: self.view.frame.width, height: 327)
+        
+        let scrollViewHeight = mainScrollView.frame.height
+        let scrollViewWidth = mainScrollView.frame.width
+        
+        //setting frames for sign in and sign up pages
+        signIn.view.frame = CGRect(x: 0, y: 0, width: scrollViewWidth, height: scrollViewHeight)
+        signUp.view.frame = CGRect(x: scrollViewWidth, y: 0, width: scrollViewWidth, height: scrollViewHeight)
+        
+        //increasing the size of scrollview
+        self.mainScrollView.contentSize = CGSize(width: scrollViewWidth*2, height: scrollViewHeight)
     }
 
     override func didReceiveMemoryWarning() {

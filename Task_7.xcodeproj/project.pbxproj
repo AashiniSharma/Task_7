@@ -15,7 +15,6 @@
 		0CDD693D1E67D75900900635 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDD693C1E67D75900900635 /* MainVC.swift */; };
 		0CFD9D961E67EA5800158109 /* SignInPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD9D951E67EA5800158109 /* SignInPageVC.swift */; };
 		0CFD9D981E67EA7000158109 /* SignUpPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD9D971E67EA7000158109 /* SignUpPageVC.swift */; };
-		0CFD9D9A1E6853FA00158109 /* reusableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD9D991E6853FA00158109 /* reusableExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		0CDD693C1E67D75900900635 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0CFD9D951E67EA5800158109 /* SignInPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPageVC.swift; sourceTree = "<group>"; };
 		0CFD9D971E67EA7000158109 /* SignUpPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPageVC.swift; sourceTree = "<group>"; };
-		0CFD9D991E6853FA00158109 /* reusableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reusableExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 			children = (
 				0CDD69271E67D6BF00900635 /* AppDelegate.swift */,
 				0CDD693C1E67D75900900635 /* MainVC.swift */,
-				0CFD9D991E6853FA00158109 /* reusableExtensions.swift */,
 				0CFD9D951E67EA5800158109 /* SignInPageVC.swift */,
 				0CFD9D971E67EA7000158109 /* SignUpPageVC.swift */,
 				0CDD692B1E67D6BF00900635 /* Main.storyboard */,
@@ -150,7 +147,6 @@
 			files = (
 				0CDD69301E67D6BF00900635 /* Task_7.xcdatamodeld in Sources */,
 				0CFD9D981E67EA7000158109 /* SignUpPageVC.swift in Sources */,
-				0CFD9D9A1E6853FA00158109 /* reusableExtensions.swift in Sources */,
 				0CDD69281E67D6BF00900635 /* AppDelegate.swift in Sources */,
 				0CDD693D1E67D75900900635 /* MainVC.swift in Sources */,
 				0CFD9D961E67EA5800158109 /* SignInPageVC.swift in Sources */,
